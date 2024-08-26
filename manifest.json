@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "LeetCode Video Solutions",
+    "version": "1.0",
+    "description": "An extension that displays video solutions for LeetCode problems.",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "src/scripts/background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://leetcode.com/problems/*"],
+        "js": ["src/scripts/content.js"],
+        "css": ["src/styles/style.css"]
+      }
+    ]
+  }
+  
